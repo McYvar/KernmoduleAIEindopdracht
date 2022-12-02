@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class TestAI : MonoBehaviour
 {
-    [SerializeField] private BTNode baseNode;
+    private BTNode baseNode;
+
+    private void Start()
+    {
+        baseNode = new BTSelector(
+            //new BTInvertor(
+                new BTDebug("hallo"),
+            new BTWait(2));
+    }
 
     private void Update()
     {
