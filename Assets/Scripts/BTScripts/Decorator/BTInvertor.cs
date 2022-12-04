@@ -1,4 +1,7 @@
-﻿public class BTInvertor : BTDecorator
+﻿using UnityEngine;
+
+[CreateAssetMenu(menuName = "BT/Decorator/Invertor")]
+public class BTInvertor : BTDecorator
 {
     public BTInvertor(BTNode _child) : base(_child) { }
 

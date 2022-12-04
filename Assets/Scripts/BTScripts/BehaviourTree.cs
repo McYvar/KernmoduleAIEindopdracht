@@ -46,7 +46,7 @@ public abstract class BTComposite : BTNode
 // Decorator
 public abstract class BTDecorator : BTNode
 {
-    protected BTNode child;
+    [SerializeField] protected BTNode child;
     public BTDecorator(BTNode _child)
     {
         child = _child;
