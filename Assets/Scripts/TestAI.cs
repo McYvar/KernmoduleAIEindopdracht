@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class TestAI : MonoBehaviour
 {
-    private BTNode baseNode;
+    [SerializeField] private Blackboard blackboard;
+    [SerializeField] private BTNode baseNode;
 
     private void Start()
     {
-        baseNode = new BTSelector(
-            //new BTInvertor(
-                new BTDebug("hallo"),
-            new BTWait(2));
+        blackboard.Initialize();
     }
 
     private void Update()
