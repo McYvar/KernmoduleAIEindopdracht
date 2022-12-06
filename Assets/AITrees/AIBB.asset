@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e007d028bc69f44c9fad411a4431880, type: 3}
   m_Name: AIBB
   m_EditorClassIdentifier: 
+  autoReset: 1
   baseSharedVariables: []
   references:
     version: 2

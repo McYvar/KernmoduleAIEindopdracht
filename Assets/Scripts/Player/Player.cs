@@ -10,12 +10,14 @@ public class Player : MonoBehaviour, IDamageable
     [SerializeField] private float moveSpeed = 3;
     [SerializeField] private float deathForce = 1000;
     [SerializeField] private GameObject ragdoll;
+    [SerializeField] protected Blackboard globalBlackboard;
     private Rigidbody rb;
     private Animator animator;
     private float vert = 0;
     private float hor = 0;
     private Vector3 moveDirection;
     private Collider mainCollider;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,8 @@ public class Player : MonoBehaviour, IDamageable
         }
         mainCollider.enabled = true;
         rb.isKinematic = false;
+
+        globalBlackboard?.InitializeAsTeam("Player", transform);
     }
 
     // Update is called once per frame
@@ -55,11 +59,6 @@ public class Player : MonoBehaviour, IDamageable
 
         bool isMoving = hor != 0 || vert != 0;
         ChangeAnimation(isMoving ? "Walk Crouch" : "Crouch Idle", isMoving ? 0.05f : 0.15f);
-    }
-
-    private void FixedUpdate()
-    {
-        
     }
 
     public void TakeDamage(GameObject attacker, int damage)

@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8938c02b91bcbf643a7953bb736389c5, type: 3}
+  m_Name: Guard_WaitAfterSetNewPatrolPoint
+  m_EditorClassIdentifier: 
+  autoReset: 1
+  stateName: I reached my destination
+  waitMin: 1
+  waitMax: 4

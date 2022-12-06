@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7be4e0269d2254469f2501d018c2cfc, type: 3}
   m_Name: Guard_Selector_RangedOrMelee
   m_EditorClassIdentifier: 
+  autoReset: 1
+  stateName: Selector node to do a ranged or melee attack
   children:
   - {fileID: 11400000, guid: 24867f34d56078b4a9d7d0fb56dc21ac, type: 2}
   - {fileID: 11400000, guid: f116bf3c39fb04849ac1c2f514125fa4, type: 2}

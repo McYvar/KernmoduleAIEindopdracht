@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10538277241262b4ab0b21c688e29062, type: 3}
   m_Name: Guard_Invertor_SpottingPlayer
   m_EditorClassIdentifier: 
-  child: {fileID: 11400000, guid: 5083a2fd9a5677c4da4e5827480dd2ab, type: 2}
+  autoReset: 1
+  stateName: Inverting next node
+  child: {fileID: 11400000, guid: 8eb42ee2d66e926438c99a13ff382888, type: 2}

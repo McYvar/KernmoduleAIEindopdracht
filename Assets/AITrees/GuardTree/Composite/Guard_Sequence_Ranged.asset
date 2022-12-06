@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8eabe347c7b084ebc426c41a3c0355, type: 3}
   m_Name: Guard_Sequence_Ranged
   m_EditorClassIdentifier: 
+  autoReset: 1
+  stateName: Sequence node for ranged attack
   children:
   - {fileID: 11400000, guid: e3e249e19ae693845a630fb6007fc568, type: 2}

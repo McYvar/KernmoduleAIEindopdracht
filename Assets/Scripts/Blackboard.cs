@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Blackboard")]
-public class Blackboard : ScriptableObject
+public class Blackboard : BaseScriptableObject
 {
     [SerializeReference] public List<BaseSharedVariable> baseSharedVariables = new List<BaseSharedVariable>();
 
@@ -18,15 +18,9 @@ public class Blackboard : ScriptableObject
         return null;
     }
 
-    public void AddVariable(string name, BaseSharedVariable variable)
+    public void AddVariable(string _name, BaseSharedVariable _variable)
     {
-        dictionary.Add(name, variable);
-    }
-
-    [ContextMenu("Add FloatVariable")]
-    public void AddFloatVariable()
-    {
-        baseSharedVariables.Add(new FloatVariable());
+        dictionary.Add(_name, _variable);
     }
 
     public void Initialize()
@@ -35,6 +29,33 @@ public class Blackboard : ScriptableObject
         {
             AddVariable(variable.name, variable);
         }
+    }
+
+    public void InitializeAsTeam(string _team, Transform _unit)
+    {
+        if (dictionary.ContainsKey(_team))
+        {
+            TransformListVariable t = GetVariable<TransformListVariable>(_team);
+            t.name = _team;
+            t.Value.Add(_unit);
+            return;
+        }
+
+        AddTransformListVariable();
+        AddVariable(_team, baseSharedVariables[baseSharedVariables.Count - 1]);
+        InitializeAsTeam(_team, _unit);
+    }
+
+    [ContextMenu("Add FloatVariable")]
+    public void AddFloatVariable()
+    {
+        baseSharedVariables.Add(new FloatVariable());
+    }
+
+    [ContextMenu("Add TransformListVariable")]
+    public void AddTransformListVariable()
+    {
+        baseSharedVariables.Add(new TransformListVariable());
     }
 }
 
@@ -67,8 +88,7 @@ public class SharedVariable<T> : BaseSharedVariable
     }
 }
 
-
-public enum VariableTypes { floatVariable = 0 }
+public enum VariableTypes { floatVariable = 0, transformListVariable = 1 }
 
 public class VariableSelector
 {
@@ -86,3 +106,12 @@ public class VariableSelector
 
 [System.Serializable]
 public class FloatVariable : SharedVariable<float> { }
+
+[System.Serializable]
+public class TransformListVariable : SharedVariable<List<Transform>> 
+{
+    public TransformListVariable()
+    {
+        value = new List<Transform>();
+    }
+}

@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7be4e0269d2254469f2501d018c2cfc, type: 3}
   m_Name: Ninja_Selector_Headnode
   m_EditorClassIdentifier: 
-  children: []
+  autoReset: 1
+  children:
+  - {fileID: 11400000, guid: 1d7f1e77232145a40bd4cc93843e9c25, type: 2}
+  - {fileID: 11400000, guid: d9769bdaf0d0dfd4f9bb54411d6a010e, type: 2}

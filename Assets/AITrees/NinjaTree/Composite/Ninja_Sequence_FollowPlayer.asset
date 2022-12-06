@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8eabe347c7b084ebc426c41a3c0355, type: 3}
   m_Name: Ninja_Sequence_FollowPlayer
   m_EditorClassIdentifier: 
-  children: []
+  autoReset: 1
+  children:
+  - {fileID: 11400000, guid: b60073cf5a7276c41b133c630814f4b9, type: 2}

@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7be4e0269d2254469f2501d018c2cfc, type: 3}
   m_Name: Guard_Selector_NoPlayerThenSeekWaypoint
   m_EditorClassIdentifier: 
+  autoReset: 1
+  stateName: Selector node to look for waypoint
   children:
-  - {fileID: 11400000, guid: f7befeecfbb57b1488e92346c2764481, type: 2}
+  - {fileID: 11400000, guid: 7a9ec2a54cce10b46a71d2b0b83ccd56, type: 2}
+  - {fileID: 11400000, guid: d1f5f35cf0e59bd459f9a37ffb90cf88, type: 2}

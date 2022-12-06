@@ -1,13 +1,8 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "BT/Action/BTWait")]
+[CreateAssetMenu(menuName = "BT/Action/Wait")]
 public class BTWait : BTNode
 {
-    public BTWait(int _waitTime)
-    {
-        waitTime = _waitTime;
-    }
-
     [SerializeField] private float waitTime;
     private float currentTime;
 

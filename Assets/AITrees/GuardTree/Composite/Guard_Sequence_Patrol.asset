@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8eabe347c7b084ebc426c41a3c0355, type: 3}
   m_Name: Guard_Sequence_Patrol
   m_EditorClassIdentifier: 
+  autoReset: 1
+  stateName: Sequence node for seeking player
   children:
-  - {fileID: 11400000, guid: b981b89165d9be848babd8625e98af3d, type: 2}
+  - {fileID: 11400000, guid: b94e5b7f4b09c5644b8805ffec9f10de, type: 2}
+  - {fileID: 11400000, guid: 59ca903df8f218a419ff33047fa9ed73, type: 2}

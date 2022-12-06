@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8eabe347c7b084ebc426c41a3c0355, type: 3}
   m_Name: Guard_Sequence_WeaponSearch
   m_EditorClassIdentifier: 
-  children: []
+  autoReset: 1
+  stateName: Sequence node for searching a weapon
+  children:
+  - {fileID: 11400000, guid: dc1d10c6b5962824b91a9abd1c214eaa, type: 2}

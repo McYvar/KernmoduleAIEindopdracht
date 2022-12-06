@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8eabe347c7b084ebc426c41a3c0355, type: 3}
   m_Name: Ninja_Sequence_Hide
   m_EditorClassIdentifier: 
-  children: []
+  autoReset: 1
+  children:
+  - {fileID: 11400000, guid: 839777a30815e4240b075522c9efe7f1, type: 2}
+  - {fileID: 11400000, guid: 8fe83adf14a599049b163d1737ab88f4, type: 2}

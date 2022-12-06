@@ -10,6 +10,7 @@ public class BTSequence : BTComposite
         for (; currentChild < children.Length; currentChild++)
         {
             BTStatus result = children[currentChild].Tick();
+            if (result == BTStatus.FAILURE) currentChild = 0;
             if (result != BTStatus.SUCCESS) return result;
         }
         return BTStatus.SUCCESS;

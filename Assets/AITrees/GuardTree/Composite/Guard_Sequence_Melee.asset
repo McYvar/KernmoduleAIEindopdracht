@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8eabe347c7b084ebc426c41a3c0355, type: 3}
   m_Name: Guard_Sequence_Melee
   m_EditorClassIdentifier: 
+  autoReset: 1
+  stateName: Sequence node for melee attack
   children: []
