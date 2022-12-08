@@ -15,4 +15,8 @@ MonoBehaviour:
   autoReset: 1
   stateName: Sequence node for searching a weapon
   children:
-  - {fileID: 11400000, guid: dc1d10c6b5962824b91a9abd1c214eaa, type: 2}
+  - {fileID: 11400000, guid: 2be27ebad329d324290d034318109e8c, type: 2}
+  - {fileID: 11400000, guid: 61ebe84b22315e24fab1ca751660b793, type: 2}
+  - {fileID: 11400000, guid: 976c65aea6b47ed419608edf59100af7, type: 2}
+  - {fileID: 11400000, guid: 5de0daa8f96499648ba1183185ddc97c, type: 2}
+  - {fileID: 11400000, guid: 4e4f9dddf912e7543b42626556f370ea, type: 2}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e1d63e1f149414aaa9bb5f1b3ebcba, type: 3}
+  m_Name: Guard_RemainStatusUntil_AfterISeePlayer
+  m_EditorClassIdentifier: 
+  autoReset: 1
+  stateName: Remain in attack mode
+  child: {fileID: 11400000, guid: 8eb42ee2d66e926438c99a13ff382888, type: 2}
+  waitTime: 5
+  conditionStatus: 0

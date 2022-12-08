@@ -6,7 +6,12 @@ using TMPro;
 // Base node
 public abstract class BTNode : BaseScriptableObject
 {
-    [SerializeField] private string stateName;
+    [SerializeField, TextArea] private string stateName;
+
+    private void OnEnable()
+    {
+        isInitialized = false;
+    }
 
     public BTStatus Tick()
     {
@@ -73,10 +78,6 @@ public abstract class BTComposite : BTNode
 public abstract class BTDecorator : BTNode
 {
     [SerializeField] protected BTNode child;
-    public BTDecorator(BTNode _child)
-    {
-        child = _child;
-    }
 
     public override void InitializeValues(Agent _agent, Blackboard _globalBlackboard, TMP_Text _stateText)
     {

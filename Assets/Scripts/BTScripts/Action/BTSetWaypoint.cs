@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "BT/Action/SetCheckpoint")]
+[CreateAssetMenu(menuName = "BT/Action/SetWaypoint")]
 public class BTSetWaypoint : BTNode
 {
     [SerializeField] private Vector3[] waypoints;

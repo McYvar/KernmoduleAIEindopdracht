@@ -3,8 +3,6 @@
 [CreateAssetMenu(menuName = "BT/Decorator/Invertor")]
 public class BTInvertor : BTDecorator
 {
-    public BTInvertor(BTNode _child) : base(_child) { }
-
     protected override BTStatus Update()
     {
         BTStatus result = child.Tick();

@@ -15,7 +15,6 @@ MonoBehaviour:
   autoReset: 1
   stateName: Parallel node to set new patrol point
   children:
-  - {fileID: 11400000, guid: c82c0214a94b6314fba799a1ba9d49aa, type: 2}
   - {fileID: 11400000, guid: 6142dd816494221489d79bb5c34e61b2, type: 2}
   - {fileID: 11400000, guid: 48b499d5159af8f45afded8a7209eb28, type: 2}
   - {fileID: 11400000, guid: 0d0abc93f9bf5924e97ed819f586eca5, type: 2}

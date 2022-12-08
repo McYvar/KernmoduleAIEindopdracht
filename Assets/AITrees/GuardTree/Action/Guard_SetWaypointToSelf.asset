@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Guard_SetWaypointToSelf
   m_EditorClassIdentifier: 
   autoReset: 1
-  stateName: 
+  stateName: Setting waypoint to my current location
   waypoints: []
   searchInRange: 0
   setWaypointToSelf: 1

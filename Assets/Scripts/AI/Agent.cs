@@ -13,9 +13,12 @@ public class Agent : MonoBehaviour
     [SerializeField] protected Blackboard globalBlackboard;
     [SerializeField] TMP_Text stateText;
     protected Animator animator;
-    protected Transform enemy;
+    public Transform target { get; protected set; }
+
+    [SerializeReference] private Equipment equipment;
 
     [SerializeField] private Transform playerCamera;
+
 
     private void Awake()
     {
@@ -35,16 +38,34 @@ public class Agent : MonoBehaviour
         stateText.transform.rotation = Quaternion.LookRotation(playerCamera.forward);
     }
 
-    public void SetCurrentEnemy(Transform _enemy)
+    public void SetCurrentTarget(Transform _target)
     {
-        enemy = _enemy;
+        target = _target;
     }
 
-    public void ChangeAnimation(string animationName, float fadeTime)
+    public Equipment GetCurrentEquipment()
     {
-        if (!animator.GetCurrentAnimatorStateInfo(0).IsName(animationName) && !animator.IsInTransition(0))
+        return equipment;
+    }
+
+    public void SetCurrentEquipment(Equipment _equipment)
+    {
+        equipment = _equipment;
+    }
+
+    public void ChangeAnimation(string _animationName, float _fadeTime)
+    {
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName(_animationName) && !animator.IsInTransition(0))
         {
-            animator.CrossFade(animationName, fadeTime);
+            animator.CrossFade(_animationName, _fadeTime);
+        }
+    }
+
+    public void PlayAnimationOnece(string _animationName)
+    {
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName(_animationName) && !animator.IsInTransition(0))
+        {
+            animator.Play(_animationName);
         }
     }
 }

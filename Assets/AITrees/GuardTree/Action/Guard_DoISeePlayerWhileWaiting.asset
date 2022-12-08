@@ -16,4 +16,4 @@ MonoBehaviour:
   stateName: Checking for player
   targetTeamName: Player
   targetFOVAngle: 100
-  targetFOVScale: 10
+  targetFOVRange: 15

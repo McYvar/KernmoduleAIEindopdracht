@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Blackboard")]
-public class Blackboard : BaseScriptableObject
+public class Blackboard : MonoBehaviour
 {
     [SerializeReference] public List<BaseSharedVariable> baseSharedVariables = new List<BaseSharedVariable>();
 
@@ -56,6 +55,11 @@ public class Blackboard : BaseScriptableObject
     public void AddTransformListVariable()
     {
         baseSharedVariables.Add(new TransformListVariable());
+    }
+
+    private void Awake()
+    {
+        Initialize();
     }
 }
 

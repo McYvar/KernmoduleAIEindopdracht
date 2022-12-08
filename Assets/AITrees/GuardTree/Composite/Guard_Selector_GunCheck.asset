@@ -15,4 +15,5 @@ MonoBehaviour:
   autoReset: 1
   stateName: Selector node to check for a gun
   children:
+  - {fileID: 11400000, guid: e7d883f15276f154cb3e67e361ba433d, type: 2}
   - {fileID: 11400000, guid: e6e692ee577614d45920e7f0d86093a9, type: 2}

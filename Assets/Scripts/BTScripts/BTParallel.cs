@@ -8,6 +8,10 @@ public class BTParallel : BTComposite
     [SerializeField] protected Policy succesPolicy;
     [SerializeField] protected Policy failurePolicy;
 
+    private int succesCount, failureCount;
+
+    bool[] isActive;
+
     protected override void OnTerminate()
     {
         base.OnTerminate();
@@ -17,23 +21,35 @@ public class BTParallel : BTComposite
         }
     }
 
+    protected override void OnInitialze()
+    {
+        base.OnInitialze();
+
+        succesCount = 0;
+        failureCount = 0;
+
+        isActive = new bool[children.Length];
+        for (int i = 0; i < isActive.Length; i++) { isActive[i] = true; }
+    }
+
     protected override BTStatus Update()
     {
-        int succesCount = 0, failureCount = 0;
-        foreach (BTNode child in children)
+        for (int i = 0; i < children.Length; i++)
         {
-            BTStatus tempStatus = child.Tick();
+            if (!isActive[i]) continue;
+            BTStatus tempStatus = children[i].Tick();
             if (tempStatus == BTStatus.SUCCESS)
             {
                 succesCount++;
+                isActive[i] = false;
                 if (succesPolicy == Policy.requireOne) return BTStatus.SUCCESS;
             }
 
             if (tempStatus == BTStatus.FAILURE)
             {
                 failureCount++;
+                isActive[i] = false;
                 if (failurePolicy == Policy.requireOne) return BTStatus.FAILURE;
-
             }
         }
 

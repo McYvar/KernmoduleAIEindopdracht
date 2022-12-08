@@ -19,4 +19,5 @@ MonoBehaviour:
   - {x: 6.59, y: 0, z: 8.64}
   - {x: -7.01, y: 0, z: 5.66}
   - {x: 0.03, y: 0, z: 5.97}
-  searchInRange: 1
+  searchInRange: 0
+  setWaypointToSelf: 0

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3f164380131d9f4fa797808aba54338, type: 3}
+  m_Name: Guard_Parallel_RuningToWeapon
+  m_EditorClassIdentifier: 
+  autoReset: 1
+  stateName: Parallel node for running towards weapon
+  children:
+  - {fileID: 11400000, guid: 38ccfd31c1920824eafdd738a0171a57, type: 2}
+  - {fileID: 11400000, guid: 2c33cea2b9a2d55439416ed42e1bb482, type: 2}
+  - {fileID: 11400000, guid: e557699fcd7f9f442806f452070b9021, type: 2}
+  - {fileID: 11400000, guid: a2d7e8b3d30a8364b854499025c071ce, type: 2}
+  - {fileID: 11400000, guid: 85ed26a0fbc209940a04f237108e86f0, type: 2}
+  succesPolicy: 1
+  failurePolicy: 0

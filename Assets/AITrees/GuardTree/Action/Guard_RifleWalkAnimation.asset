@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Guard_RifleWalkAnimation
   m_EditorClassIdentifier: 
   autoReset: 1
-  stateName: Starting Rifle Walk animation
+  stateName: Walking + rifle walk animation
   animationName: Rifle Walk
   fadeTime: 0.1

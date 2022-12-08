@@ -18,7 +18,6 @@ public class Player : MonoBehaviour, IDamageable
     private Vector3 moveDirection;
     private Collider mainCollider;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -43,7 +42,6 @@ public class Player : MonoBehaviour, IDamageable
         globalBlackboard?.InitializeAsTeam("Player", transform);
     }
 
-    // Update is called once per frame
     void Update()
     {
         vert = Input.GetAxis("Vertical");

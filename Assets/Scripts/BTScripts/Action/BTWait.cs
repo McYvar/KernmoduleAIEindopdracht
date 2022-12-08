@@ -6,6 +6,11 @@ public class BTWait : BTNode
     [SerializeField] private float waitTime;
     private float currentTime;
 
+    private void OnEnable()
+    {
+        currentTime = 0;
+    }
+
     protected override BTStatus Update()
     {
         currentTime += Time.deltaTime;

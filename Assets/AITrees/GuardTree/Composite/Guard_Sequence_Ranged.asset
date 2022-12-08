@@ -16,3 +16,4 @@ MonoBehaviour:
   stateName: Sequence node for ranged attack
   children:
   - {fileID: 11400000, guid: e3e249e19ae693845a630fb6007fc568, type: 2}
+  - {fileID: 11400000, guid: 9f6b914952c25f745bca18e4359bb17f, type: 2}

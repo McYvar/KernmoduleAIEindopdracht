@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoReset: 1
   stateName: Sequence node for melee attack
-  children: []
+  children:
+  - {fileID: 11400000, guid: 7a645a696a933204fb5a3c1046009165, type: 2}
+  - {fileID: 11400000, guid: ca555491e57a24e47b287020d63de4e3, type: 2}
+  - {fileID: 11400000, guid: 1ef70135170471d4ab2154fc20cc3514, type: 2}
+  - {fileID: 11400000, guid: 0e52e77f5630f81478a332e798f7f05b, type: 2}

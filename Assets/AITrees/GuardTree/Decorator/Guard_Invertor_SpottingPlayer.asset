@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoReset: 1
   stateName: Inverting next node
-  child: {fileID: 11400000, guid: 8eb42ee2d66e926438c99a13ff382888, type: 2}
+  child: {fileID: 11400000, guid: 392cd8f4a80e36b4ebb9faea0c8a5833, type: 2}

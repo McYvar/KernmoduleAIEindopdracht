@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e007d028bc69f44c9fad411a4431880, type: 3}
-  m_Name: AIBB
+  m_Script: {fileID: 11500000, guid: 4c2d3680939606f46a2a3cf68ac8822c, type: 3}
+  m_Name: Guard_CheckForWeapon
   m_EditorClassIdentifier: 
   autoReset: 1
-  baseSharedVariables: []
-  references:
-    version: 2
-    RefIds: []
+  stateName: Checking if I have a weapon

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoReset: 1
   stateName: I reached my goal!
-  maxDistanceToCheckpoint: 0.1
+  maxDistanceToCheckpoint: 1

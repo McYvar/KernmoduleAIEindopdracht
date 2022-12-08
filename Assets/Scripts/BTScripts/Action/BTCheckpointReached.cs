@@ -9,7 +9,8 @@ public class BTCheckpointReached : BTNode
 
     protected override BTStatus Update()
     {
-        if (Vector3.Distance(agent.transform.position, agent.waypoint) < maxDistanceToCheckpoint)
+        bool condition = (Vector3.Distance(agent.transform.position, agent.waypoint) < maxDistanceToCheckpoint);
+        if (condition)
         {
             return BTStatus.SUCCESS;
         }
