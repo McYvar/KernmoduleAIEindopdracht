@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Guard_CanIPickUpMyWeapon
   m_EditorClassIdentifier: 
   autoReset: 1
-  stateName: If close enough to weapon, pick it up
+  stateName: I SEE A PISTOL!!!
   targetTeamName: Pistol
-  targetFOVAngle: 360
+  targetFOVAngle: 0
   targetFOVRange: 1
+  CheckAngle: 0
+  layer:
+    serializedVersion: 2
+    m_Bits: 1

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc8eabe347c7b084ebc426c41a3c0355, type: 3}
-  m_Name: Guard_Sequence_WhilstChacingPlayer
+  m_Name: Guard_Sequence_WhilstChasingPlayer
   m_EditorClassIdentifier: 
   autoReset: 1
   stateName: Sequence node for following player

@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: Ninja_Selector_IsPlayerInRange
   m_EditorClassIdentifier: 
   autoReset: 1
-  children: []
+  stateName: Checking if player is in range
+  children:
+  - {fileID: 11400000, guid: ec6266fa12d15304ba90357b42538557, type: 2}
+  - {fileID: 11400000, guid: 948687b067e6b404f9cdbc2eb7fd253b, type: 2}
+  - {fileID: 11400000, guid: e8360d1ded7c9244db6b9afc16066d6d, type: 2}

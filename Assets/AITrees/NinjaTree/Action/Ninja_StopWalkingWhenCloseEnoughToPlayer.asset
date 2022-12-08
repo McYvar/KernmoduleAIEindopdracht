@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5aeaa39ad2f6554584404066ef7b260, type: 3}
-  m_Name: Guard_DoISeePlayer
+  m_Script: {fileID: 11500000, guid: 9687cc080febc7a40a93abd7059faf66, type: 3}
+  m_Name: Ninja_StopWalkingWhenCloseEnoughToPlayer
   m_EditorClassIdentifier: 
   autoReset: 1
-  stateName: Checking for player
-  targetTeamName: Player
-  targetFOVAngle: 120
-  targetFOVRange: 15
+  stateName: Just chilling next to you

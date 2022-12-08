@@ -9,7 +9,7 @@ public class BTLookAtTarget : BTNode
     {
         if (agent.target == null) return BTStatus.FAILURE;
         Vector3 target = new Vector3(agent.target.position.x, agent.transform.position.y, agent.target.position.z);
-        agent.transform.LookAt(target);
+        agent.transform.rotation = Quaternion.LookRotation(target - agent.transform.position);
         return BTStatus.SUCCESS;
     }
 }

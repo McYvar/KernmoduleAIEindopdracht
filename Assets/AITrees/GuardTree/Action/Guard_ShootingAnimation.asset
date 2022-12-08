@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Guard_ShootingAnimation
   m_EditorClassIdentifier: 
   autoReset: 1
-  stateName: Shooting animation (idle for now)
+  stateName: Shooting animation (it's actually idle)
   animationName: Idle
   fadeTime: 0.1

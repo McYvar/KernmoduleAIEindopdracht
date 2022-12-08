@@ -6,6 +6,6 @@ public class Guard : Agent
 {
     private void Start()
     {
-        globalBlackboard?.InitializeAsTeam("Enemy", transform);
+        globalBlackboard?.InitializeAsTeam("Guard", transform);
     }
 }

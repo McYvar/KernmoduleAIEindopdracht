@@ -15,5 +15,9 @@ MonoBehaviour:
   autoReset: 1
   stateName: Searching for weapon in range
   targetTeamName: Pistol
-  targetFOVAngle: 360
-  targetFOVRange: 10
+  targetFOVAngle: 0
+  targetFOVRange: 50
+  CheckAngle: 0
+  layer:
+    serializedVersion: 2
+    m_Bits: 1

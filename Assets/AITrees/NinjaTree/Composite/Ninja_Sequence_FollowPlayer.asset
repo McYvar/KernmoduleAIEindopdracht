@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Ninja_Sequence_FollowPlayer
   m_EditorClassIdentifier: 
   autoReset: 1
+  stateName: Following player
   children:
+  - {fileID: 11400000, guid: d4e9f470e12641f48b02b85bce3fcd09, type: 2}
+  - {fileID: 11400000, guid: 35ecff413aaec3d4a83603515a8d9efe, type: 2}
   - {fileID: 11400000, guid: b60073cf5a7276c41b133c630814f4b9, type: 2}

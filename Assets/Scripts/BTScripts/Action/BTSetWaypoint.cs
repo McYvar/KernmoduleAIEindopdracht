@@ -12,6 +12,15 @@ public class BTSetWaypoint : BTNode
 
     [Space(10), SerializeField] private bool setWaypointToSelf;
 
+    [SerializeField] private bool searchClosest;
+
+    private int currentWaypoint;
+
+    private void OnEnable()
+    {
+        currentWaypoint = 0;
+    }
+
     protected override BTStatus Update()
     {
         agent.waypoint = SeekNewWaypoint();
@@ -37,11 +46,27 @@ public class BTSetWaypoint : BTNode
 
             waypoint = new Vector3(randX, agent.transform.position.y, randZ);
         }
+        else if (searchClosest)
+        {
+            waypoint = waypoints[0];
+            float dist = Vector3.Distance(agent.transform.position, waypoint);
+            foreach (Vector3 point in waypoints)
+            {
+                float newdist = Vector3.Distance(agent.transform.position, point);
+                if (newdist < dist)
+                {
+                    waypoint = point;
+                    dist = newdist;
+                }
+            }
+        }
         else
         {
-            int rand = Random.Range(0, waypoints.Length);
-            if (waypoints[rand] == agent.waypoint) SeekNewWaypoint();
-            waypoint = waypoints[rand];
+            if (currentWaypoint >= waypoints.Length) 
+                currentWaypoint = 0;
+
+            waypoint = waypoints[currentWaypoint];
+            currentWaypoint++;
         }
         return waypoint;
     }

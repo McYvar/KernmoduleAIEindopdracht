@@ -3,15 +3,18 @@
 [CreateAssetMenu(menuName = "BT/Action/IsTargetInFOV")]
 public class BTIsTargetInFOV : BTNode
 {
-    [Header("If the FOV angle is set >=360, then it's basically a function to check if something is in range")]
     [SerializeField] protected string targetTeamName;
     [SerializeField] protected float targetFOVAngle;
     [SerializeField] protected float targetFOVRange;
 
+    [SerializeField] private bool CheckAngle = true;
+
+    [SerializeField] LayerMask layer;
+
     protected override BTStatus Update()
     {
         TransformListVariable temp = globalBlackboard.GetVariable<TransformListVariable>(targetTeamName);
-
+        
         if (temp == null) return BTStatus.FAILURE;
         if (temp.Value.Count == 0) return BTStatus.FAILURE;
 
@@ -42,14 +45,18 @@ public class BTIsTargetInFOV : BTNode
 
     protected bool FOV(Transform target)
     {
+        Debug.DrawLine(agent.transform.position, target.position);
         // If target is outside of the set FOV angle, return false
-        float angle = Vector3.Angle(agent.transform.forward, target.position - agent.transform.position);
-        if (angle > Mathf.Abs(targetFOVAngle / 2)) return false;
+        if (CheckAngle)
+        {
+            float angle = Vector3.Angle(agent.transform.forward, target.position - agent.transform.position);
+            if (angle > Mathf.Abs(targetFOVAngle / 2)) return false;
+        }
 
         // Return true if sight to target is not blocked
         RaycastHit hit;
-        Physics.Raycast(agent.transform.position, target.position - agent.transform.position, out hit, targetFOVRange);
-
+        //bool check = Physics.Raycast(agent.transform.position, target.position - agent.transform.position, out hit, targetFOVRange, layer);
+        bool check = Physics.SphereCast(agent.transform.position, 0.3f, target.position - agent.transform.position, out hit, targetFOVRange, layer);
         if (hit.collider == null) return false;
         if (hit.collider.transform == target) return true;
         return false;

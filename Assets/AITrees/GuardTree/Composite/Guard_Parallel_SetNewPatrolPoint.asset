@@ -17,7 +17,6 @@ MonoBehaviour:
   children:
   - {fileID: 11400000, guid: 6142dd816494221489d79bb5c34e61b2, type: 2}
   - {fileID: 11400000, guid: 48b499d5159af8f45afded8a7209eb28, type: 2}
-  - {fileID: 11400000, guid: 0d0abc93f9bf5924e97ed819f586eca5, type: 2}
   - {fileID: 11400000, guid: 89bca875803a7824ebe6f75c75f4651e, type: 2}
   succesPolicy: 1
   failurePolicy: 0

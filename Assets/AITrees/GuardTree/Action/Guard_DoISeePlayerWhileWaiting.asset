@@ -15,5 +15,9 @@ MonoBehaviour:
   autoReset: 1
   stateName: Checking for player
   targetTeamName: Player
-  targetFOVAngle: 100
-  targetFOVRange: 15
+  targetFOVAngle: 170
+  targetFOVRange: 30
+  CheckAngle: 1
+  layer:
+    serializedVersion: 2
+    m_Bits: 1

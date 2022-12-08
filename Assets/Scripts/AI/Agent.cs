@@ -19,6 +19,8 @@ public class Agent : MonoBehaviour
 
     [SerializeField] private Transform playerCamera;
 
+    [SerializeField] private AiEvents aiEvents;
+
 
     private void Awake()
     {
@@ -63,9 +65,7 @@ public class Agent : MonoBehaviour
 
     public void PlayAnimationOnece(string _animationName)
     {
-        if (!animator.GetCurrentAnimatorStateInfo(0).IsName(_animationName) && !animator.IsInTransition(0))
-        {
             animator.Play(_animationName);
-        }
+
     }
 }

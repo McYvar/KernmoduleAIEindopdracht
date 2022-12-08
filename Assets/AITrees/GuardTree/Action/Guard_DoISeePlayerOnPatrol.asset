@@ -9,8 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10538277241262b4ab0b21c688e29062, type: 3}
-  m_Name: Ninja_Invertor_PlayerSpotted
+  m_Script: {fileID: 11500000, guid: e5aeaa39ad2f6554584404066ef7b260, type: 3}
+  m_Name: Guard_DoISeePlayerOnPatrol
   m_EditorClassIdentifier: 
   autoReset: 1
-  child: {fileID: 0}
+  stateName: Checking for player
+  targetTeamName: Player
+  targetFOVAngle: 170
+  targetFOVRange: 30
+  CheckAngle: 1
+  layer:
+    serializedVersion: 2
+    m_Bits: 1

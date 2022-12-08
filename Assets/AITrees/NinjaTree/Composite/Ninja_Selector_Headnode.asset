@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Ninja_Selector_Headnode
   m_EditorClassIdentifier: 
   autoReset: 1
+  stateName: Headnode
   children:
   - {fileID: 11400000, guid: 1d7f1e77232145a40bd4cc93843e9c25, type: 2}
   - {fileID: 11400000, guid: d9769bdaf0d0dfd4f9bb54411d6a010e, type: 2}

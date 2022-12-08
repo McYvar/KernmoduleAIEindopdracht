@@ -17,3 +17,6 @@ MonoBehaviour:
   targetTeamName: Player
   targetFOVAngle: 360
   targetFOVRange: 1
+  layer:
+    serializedVersion: 2
+    m_Bits: 1

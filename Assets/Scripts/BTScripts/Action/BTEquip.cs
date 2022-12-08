@@ -12,6 +12,8 @@ public class BTEquip : BTNode
         {
             agent.SetCurrentEquipment(weapon);
             weapon.GetComponent<Renderer>().enabled = false;
+            weapon.GetComponent<BoxCollider>().enabled = false;
+            weapon.agent = agent;
             return BTStatus.SUCCESS;
         }
 
@@ -20,6 +22,8 @@ public class BTEquip : BTNode
         {
             agent.SetCurrentEquipment(smokeBomb);
             smokeBomb.GetComponent<Renderer>().enabled = false;
+            smokeBomb.GetComponent<BoxCollider>().enabled = false;
+            smokeBomb.agent = agent;
             return BTStatus.SUCCESS;
         }
 

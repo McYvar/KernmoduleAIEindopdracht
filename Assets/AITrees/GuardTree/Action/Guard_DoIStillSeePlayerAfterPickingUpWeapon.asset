@@ -15,5 +15,9 @@ MonoBehaviour:
   autoReset: 1
   stateName: Checking if I still see the player
   targetTeamName: Player
-  targetFOVAngle: 360
-  targetFOVRange: 20
+  targetFOVAngle: 0
+  targetFOVRange: 30
+  CheckAngle: 0
+  layer:
+    serializedVersion: 2
+    m_Bits: 1

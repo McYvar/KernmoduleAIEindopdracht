@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Guard_CheckIfICanHitPlayer
   m_EditorClassIdentifier: 
   autoReset: 1
-  stateName: 
+  stateName: Running towards player
   maxDistanceToCheckpoint: 2

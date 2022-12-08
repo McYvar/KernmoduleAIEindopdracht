@@ -15,10 +15,7 @@ MonoBehaviour:
   autoReset: 1
   stateName: Parallel node for shooting player
   children:
-  - {fileID: 11400000, guid: 244895345cb69c64683e103dcd69e7d9, type: 2}
-  - {fileID: 11400000, guid: 70b5cf073c133954ca193a8b3010ccfa, type: 2}
-  - {fileID: 11400000, guid: d1aca24c2c2d83047a1e7253658a9c50, type: 2}
   - {fileID: 11400000, guid: 5b6272c051d94804787e901891dd882a, type: 2}
-  - {fileID: 11400000, guid: dc1d10c6b5962824b91a9abd1c214eaa, type: 2}
+  - {fileID: 11400000, guid: 72d4b6e4024356048b6078e8e056a19b, type: 2}
   succesPolicy: 1
   failurePolicy: 0

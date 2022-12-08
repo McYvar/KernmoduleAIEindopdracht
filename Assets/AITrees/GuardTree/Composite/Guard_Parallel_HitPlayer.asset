@@ -15,6 +15,7 @@ MonoBehaviour:
   autoReset: 1
   stateName: Parallel node for hitting the player
   children:
+  - {fileID: 11400000, guid: ccc988c19e4649643ab02464bfd44ce3, type: 2}
   - {fileID: 11400000, guid: 57495f96421052546a586b9b465faa63, type: 2}
   - {fileID: 11400000, guid: dc0de5793309ea741b839799a9a4a606, type: 2}
   - {fileID: 11400000, guid: c54add89e68f21e4384138301373de85, type: 2}

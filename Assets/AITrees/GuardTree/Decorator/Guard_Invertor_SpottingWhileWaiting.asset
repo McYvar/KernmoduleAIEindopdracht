@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoReset: 1
   stateName: Seeking for player
-  child: {fileID: 11400000, guid: f154b32862c70ae40818440f4031f35c, type: 2}
+  child: {fileID: 11400000, guid: 25ba0e1cbb9115b459530c8f6b8e23bb, type: 2}

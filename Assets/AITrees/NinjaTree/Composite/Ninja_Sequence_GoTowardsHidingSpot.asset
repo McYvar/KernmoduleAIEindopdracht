@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc8eabe347c7b084ebc426c41a3c0355, type: 3}
+  m_Name: Ninja_Sequence_GoTowardsHidingSpot
+  m_EditorClassIdentifier: 
+  autoReset: 0
+  stateName: 
+  children:
+  - {fileID: 11400000, guid: 58f6465c6ce73334c8b16370cdce63d0, type: 2}
+  - {fileID: 11400000, guid: 14ba600168e8a5c4d940b9301cf5e07a, type: 2}
+  - {fileID: 11400000, guid: ab400ad029120864d927a07c958d8b3c, type: 2}

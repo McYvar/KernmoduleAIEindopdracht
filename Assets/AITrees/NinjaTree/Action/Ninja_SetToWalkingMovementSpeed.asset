@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10538277241262b4ab0b21c688e29062, type: 3}
-  m_Name: Guard_Invertor_SpottingPlayer
+  m_Script: {fileID: 11500000, guid: c4b39f2454ead654bbb2ad5a2715bf55, type: 3}
+  m_Name: Ninja_SetToWalkingMovementSpeed
   m_EditorClassIdentifier: 
   autoReset: 1
-  stateName: Inverting next node
-  child: {fileID: 11400000, guid: 392cd8f4a80e36b4ebb9faea0c8a5833, type: 2}
+  stateName: Walking towards player
+  newSpeed: 3.5

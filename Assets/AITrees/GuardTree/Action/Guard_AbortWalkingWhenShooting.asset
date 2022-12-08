@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Guard_AbortWalkingWhenShooting
   m_EditorClassIdentifier: 
   autoReset: 1
-  stateName: Abort walking when shooting
+  stateName: Shooting player!

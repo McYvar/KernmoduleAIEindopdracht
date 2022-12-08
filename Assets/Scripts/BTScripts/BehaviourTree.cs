@@ -20,6 +20,7 @@ public abstract class BTNode : BaseScriptableObject
         BTStatus status = Update();
         if (status != BTStatus.RUNNING)
             OnTerminate();
+        //Debug.Log(name + " : " + status);
         return status;
     }
 

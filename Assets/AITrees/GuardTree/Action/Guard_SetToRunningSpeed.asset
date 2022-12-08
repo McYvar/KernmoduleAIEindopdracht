@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoReset: 1
   stateName: Setting speed to running speed
-  newSpeed: 8
+  newSpeed: 7

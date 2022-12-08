@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Guard_LookAtPlayer
   m_EditorClassIdentifier: 
   autoReset: 1
-  stateName: Looking at player
+  stateName: Shooting at player

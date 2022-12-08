@@ -11,6 +11,7 @@ public class Player : MonoBehaviour, IDamageable
     [SerializeField] private float deathForce = 1000;
     [SerializeField] private GameObject ragdoll;
     [SerializeField] protected Blackboard globalBlackboard;
+    [SerializeField] private float startingHp;
     private Rigidbody rb;
     private Animator animator;
     private float vert = 0;
@@ -18,8 +19,11 @@ public class Player : MonoBehaviour, IDamageable
     private Vector3 moveDirection;
     private Collider mainCollider;
 
+    public float hp { get; set; }
+
     void Start()
     {
+        hp = startingHp;
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         mainCollider = GetComponent<Collider>();
@@ -61,24 +65,30 @@ public class Player : MonoBehaviour, IDamageable
 
     public void TakeDamage(GameObject attacker, int damage)
     {
-        animator.enabled = false;
-        var cols = GetComponentsInChildren<Collider>();
-        foreach (Collider col in cols)
-        {
-            col.enabled = true;
-        }
-        mainCollider.enabled = false;
+        hp -= damage;
+        Debug.Log("Dmg took: " + damage + " : hp: " + hp);
 
-        var rigidBodies = GetComponentsInChildren<Rigidbody>();
-        foreach (Rigidbody rib in rigidBodies)
+        if (hp < 0)
         {
-            rib.isKinematic = false;
-            rib.useGravity = true;
-            rib.AddForce(Vector3.Scale(new Vector3(1,0.5f,1),(transform.position - attacker.transform.position).normalized * deathForce));
-        }
-        ragdoll.transform.SetParent(null);
+            animator.enabled = false;
+            var cols = GetComponentsInChildren<Collider>();
+            foreach (Collider col in cols)
+            {
+                col.enabled = true;
+            }
+            mainCollider.enabled = false;
 
-        gameObject.SetActive(false);
+            var rigidBodies = GetComponentsInChildren<Rigidbody>();
+            foreach (Rigidbody rib in rigidBodies)
+            {
+                rib.isKinematic = false;
+                rib.useGravity = true;
+                rib.AddForce(Vector3.Scale(new Vector3(1, 0.5f, 1), (transform.position - attacker.transform.position).normalized * deathForce));
+            }
+            ragdoll.transform.SetParent(null);
+
+            gameObject.SetActive(false);
+        }
     }
 
     private void GetComponentsRecursively<T>(GameObject obj, ref List<T> components)

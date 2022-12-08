@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc8eabe347c7b084ebc426c41a3c0355, type: 3}
+  m_Name: Guard_Sequence_ShootPlayerWhileStillInVision
+  m_EditorClassIdentifier: 
+  autoReset: 0
+  stateName: Shooting!
+  children:
+  - {fileID: 11400000, guid: 3f2d7b9e2496a0f488824daee26459ea, type: 2}
+  - {fileID: 11400000, guid: 70b5cf073c133954ca193a8b3010ccfa, type: 2}
+  - {fileID: 11400000, guid: c5e6e5f2126cd7745b8fbe03e15467b1, type: 2}
+  - {fileID: 11400000, guid: 244895345cb69c64683e103dcd69e7d9, type: 2}
+  - {fileID: 11400000, guid: d1aca24c2c2d83047a1e7253658a9c50, type: 2}

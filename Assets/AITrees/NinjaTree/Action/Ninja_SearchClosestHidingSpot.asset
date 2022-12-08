@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f588f2841c933ba4484d022f363069a9, type: 3}
+  m_Name: Ninja_SearchClosestHidingSpot
+  m_EditorClassIdentifier: 
+  autoReset: 1
+  stateName: Searching for closest waypoint
+  waypoints:
+  - {x: -6, y: 0, z: 10.84}
+  - {x: 6.56, y: 0, z: 10.66}
+  - {x: 10.01, y: 0, z: 1.51}
+  - {x: 9.52, y: 0, z: -2.87}
+  - {x: 6.74, y: 0, z: -9.06}
+  - {x: -6.61, y: 0, z: -9.06}
+  - {x: -9.75, y: 0, z: -2.96}
+  - {x: -9.97, y: 0, z: 1.81}
+  searchInRange: 0
+  setWaypointToSelf: 0
+  searchClosest: 1
