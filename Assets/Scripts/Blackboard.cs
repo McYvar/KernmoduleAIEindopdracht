@@ -45,12 +45,6 @@ public class Blackboard : MonoBehaviour
         InitializeAsTeam(_team, _unit);
     }
 
-    [ContextMenu("Add FloatVariable")]
-    public void AddFloatVariable()
-    {
-        baseSharedVariables.Add(new FloatVariable());
-    }
-
     [ContextMenu("Add TransformListVariable")]
     public void AddTransformListVariable()
     {
@@ -92,7 +86,9 @@ public class SharedVariable<T> : BaseSharedVariable
     }
 }
 
-public enum VariableTypes { floatVariable = 0, transformListVariable = 1 }
+// I had in mind adding all types of variables to the blackboard this way, however in the end
+// I didn't use much of it
+public enum VariableTypes { transformListVariable = 0 }
 
 public class VariableSelector
 {
@@ -100,16 +96,13 @@ public class VariableSelector
     {
         switch (type)
         {
-            case VariableTypes.floatVariable:
-                return new FloatVariable();
+            case VariableTypes.transformListVariable:
+                return new TransformListVariable();
         }
 
         return null;
     }
 }
-
-[System.Serializable]
-public class FloatVariable : SharedVariable<float> { }
 
 [System.Serializable]
 public class TransformListVariable : SharedVariable<List<Transform>> 

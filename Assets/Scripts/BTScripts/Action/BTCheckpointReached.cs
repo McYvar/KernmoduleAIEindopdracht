@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "BT/Action/CheckpointReached")]
 public class BTCheckpointReached : BTNode
 {
-    [SerializeField] float maxDistanceToCheckpoint = 1f;
+    [SerializeField] private float maxDistanceToCheckpoint = 1f;
 
     protected override BTStatus Update()
     {

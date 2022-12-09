@@ -3,8 +3,6 @@
 [CreateAssetMenu(menuName = "BT/Composite/Sequence")]
 public class BTSequence : BTComposite
 {
-    public BTSequence(params BTNode[] nodes) : base(nodes) { }
-
     protected override BTStatus Update()
     {
         for (; currentChild < children.Length; currentChild++)

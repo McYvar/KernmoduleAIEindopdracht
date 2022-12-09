@@ -6,7 +6,7 @@ using UnityEngine;
 public class BTSetOutcome : BTDecorator
 {
     // Method, regardless of the child status, alsways returns the set status
-    [SerializeField] BTStatus setStatus;
+    [SerializeField] private BTStatus setStatus;
     protected override BTStatus Update()
     {
         child.Tick();

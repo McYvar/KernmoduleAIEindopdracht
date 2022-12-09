@@ -6,6 +6,12 @@ using TMPro;
 // Base node
 public abstract class BTNode : BaseScriptableObject
 {
+    public bool isInitialized { get; private set; }
+    
+    protected Agent agent;
+    protected Blackboard globalBlackboard;
+    protected TMP_Text stateText;
+    
     [SerializeField, TextArea] private string stateName;
 
     private void OnEnable()
@@ -30,13 +36,6 @@ public abstract class BTNode : BaseScriptableObject
         stateText.text = stateName;
     }
     protected virtual void OnTerminate() { isInitialized = false; }
-    
-    protected Agent agent;
-    protected Blackboard globalBlackboard;
-    protected TMP_Text stateText;
-
-    public bool isInitialized { get; private set; }
-
     public virtual void InitializeValues(Agent _agent, Blackboard _globalBlackboard, TMP_Text _stateText)
     {
         agent = _agent;
@@ -51,11 +50,6 @@ public enum BTStatus { SUCCESS, FAILURE, RUNNING }
 // Composite
 public abstract class BTComposite : BTNode
 {
-    public BTComposite(params BTNode[] nodes)
-    {
-        children = nodes;
-    }
-
     [SerializeReference] protected BTNode[] children;
     protected int currentChild = 0;
 

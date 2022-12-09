@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "BT/Action/RunAnimation")]
 public class BTRunAnimation : BTNode
 {
-    [SerializeField] string animationName;
-    [SerializeField] float fadeTime;
+    [SerializeField] private string animationName;
+    [SerializeField] private float fadeTime;
 
     protected override BTStatus Update()
     {

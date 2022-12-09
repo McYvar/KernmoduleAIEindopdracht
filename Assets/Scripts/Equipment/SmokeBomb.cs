@@ -6,7 +6,7 @@ public class SmokeBomb : Equipment
 {
     [SerializeField] private int radius;
     [SerializeField] private float throwingStrenghtVert;
-    [SerializeField] private float throwingStrenghtHori;
+    [SerializeField] private float throwingStrenghtHor;
     [SerializeField] private float popTime;
     [SerializeField] private float destroyTime;
 
@@ -19,7 +19,7 @@ public class SmokeBomb : Equipment
         Rigidbody rb = smoke.GetComponent<Rigidbody>();
 
         rb.useGravity = true;
-        rb.velocity = (target.position - smoke.transform.position) * throwingStrenghtHori + Vector3.up * throwingStrenghtVert;
+        rb.velocity = (target.position - smoke.transform.position) * throwingStrenghtHor + Vector3.up * throwingStrenghtVert;
 
         StartCoroutine(poppingSmoke(smoke));
     }

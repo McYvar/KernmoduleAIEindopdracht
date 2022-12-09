@@ -6,12 +6,16 @@ using UnityEngine.Assertions.Must;
 public class Player : MonoBehaviour, IDamageable
 {
     public Transform Camera;
+    public float hp { get; set; }
+
+    [SerializeField] protected Blackboard globalBlackboard;
+
     [SerializeField] private float rotationSpeed = 180f;
     [SerializeField] private float moveSpeed = 3;
     [SerializeField] private float deathForce = 1000;
     [SerializeField] private GameObject ragdoll;
-    [SerializeField] protected Blackboard globalBlackboard;
     [SerializeField] private float startingHp;
+    [SerializeField] private TMPro.TMP_Text hpText;
     private Rigidbody rb;
     private Animator animator;
     private float vert = 0;
@@ -19,9 +23,6 @@ public class Player : MonoBehaviour, IDamageable
     private Vector3 moveDirection;
     private Collider mainCollider;
 
-    [SerializeField] private TMPro.TMP_Text hpText;
-
-    public float hp { get; set; }
 
     void Start()
     {

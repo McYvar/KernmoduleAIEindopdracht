@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "BT/Action/RunAnimationOnce")]
 public class BTRunAnimationOnce : BTNode
 {
-    [SerializeField] string animationName;
+    [SerializeField] private string animationName;
     protected override BTStatus Update()
     {
         agent.PlayAnimationOnece(animationName);

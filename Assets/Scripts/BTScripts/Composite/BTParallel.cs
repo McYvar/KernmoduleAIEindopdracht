@@ -10,7 +10,7 @@ public class BTParallel : BTComposite
 
     private int succesCount, failureCount;
 
-    bool[] isActive;
+    private bool[] isActive;
 
     protected override void OnTerminate()
     {

@@ -3,13 +3,13 @@
 [CreateAssetMenu(menuName = "BT/Action/IsTargetInFOV")]
 public class BTIsTargetInFOV : BTNode
 {
-    [SerializeField] protected string targetTeamName;
-    [SerializeField] protected float targetFOVAngle;
-    [SerializeField] protected float targetFOVRange;
+    [SerializeField] private string targetTeamName;
+    [SerializeField] private float targetFOVAngle;
+    [SerializeField] private float targetFOVRange;
 
     [SerializeField] private bool CheckAngle = true;
 
-    [SerializeField] LayerMask layer;
+    [SerializeField] private LayerMask layer;
 
     protected override BTStatus Update()
     {
@@ -43,7 +43,7 @@ public class BTIsTargetInFOV : BTNode
         return BTStatus.FAILURE;
     }
 
-    protected bool FOV(Transform target)
+    private bool FOV(Transform target)
     {
         Debug.DrawLine(agent.transform.position, target.position);
         // If target is outside of the set FOV angle, return false

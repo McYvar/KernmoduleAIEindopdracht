@@ -7,20 +7,17 @@ using UnityEngine.AI;
 public class Agent : MonoBehaviour
 {
     [HideInInspector] public NavMeshAgent navAgent;
+    public Transform target { get; protected set; }
     public Vector3 waypoint;
 
     [SerializeField] protected BTNode tree;
     [SerializeField] protected Blackboard globalBlackboard;
-    [SerializeField] TMP_Text stateText;
-    protected Animator animator;
-    public Transform target { get; protected set; }
-
+    
+    private Animator animator;
+    [SerializeField] private TMP_Text stateText;
     [SerializeReference] private Equipment equipment;
-
     [SerializeField] private Transform playerCamera;
-
     [SerializeField] private AiEvents aiEvents;
-
 
     private void Awake()
     {
