@@ -19,11 +19,14 @@ public class Player : MonoBehaviour, IDamageable
     private Vector3 moveDirection;
     private Collider mainCollider;
 
+    [SerializeField] private TMPro.TMP_Text hpText;
+
     public float hp { get; set; }
 
     void Start()
     {
         hp = startingHp;
+        hpText.text = "HP: " + hp;
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         mainCollider = GetComponent<Collider>();
@@ -67,8 +70,9 @@ public class Player : MonoBehaviour, IDamageable
     {
         hp -= damage;
         Debug.Log("Dmg took: " + damage + " : hp: " + hp);
+        hpText.text = "HP: " + hp;
 
-        if (hp < 0)
+        if (hp <= 0)
         {
             animator.enabled = false;
             var cols = GetComponentsInChildren<Collider>();
